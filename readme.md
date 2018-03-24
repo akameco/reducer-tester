@@ -17,28 +17,63 @@ $ yarn add --dev reducer-tester
 
 ```js
 // reducer.js
-export const initialState = 0
+export const initialState = { count: 0, other: 'other' }
 
-export const reducer = (state = initialState, action) => {
+export default (state = initialState, action) => {
   switch (action.type) {
     case 'inc':
-      return state + 1
+      return { ...state, count: state.count + 1 }
     case 'dec':
-      return state - 1
+      return { ...state, count: state.count - 1 }
     default:
-      return staet
+      return state
   }
 }
 
-// test.js
+// reducer.test.js
 import reducerTester from 'reducer-tester'
-import { reducer, initialState } from './reducer'
+import reducer, { initialState } from './reducer'
 
 reducerTester({
-  reducer: reducer,
+  reducer,
   state: initialState,
   tests: [{ type: '@@INIT' }, { type: 'inc' }, { type: 'dec' }],
 })
+```
+
+### Snapshot
+
+```diff
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@@INIT 1`] = `
+"Snapshot Diff:
+Compared values have no visual difference."
+`;
+
+exports[`dec 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+  Object {
+-   \\"count\\": 0,
++   \\"count\\": -1,
+    \\"other\\": \\"other\\",
+  }"
+`;
+
+exports[`inc 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+  Object {
+-   \\"count\\": 0,
++   \\"count\\": 1,
+    \\"other\\": \\"other\\",
+  }"
+`;
 ```
 
 ## API
