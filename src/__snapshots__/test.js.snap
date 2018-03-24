@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`work 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+- Object {}
++ Object {
++   \\"result\\": \\"payload\\",
++ }"
+`;

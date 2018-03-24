@@ -1,0 +1,59 @@
+{
+  "name": "reducer-tester",
+  "version": "0.0.0",
+  "description": "reducer tester",
+  "license": "MIT",
+  "repository": "akameco/reducer-tester",
+  "author": "akameco <akameco.t@gmail.com> (akameco.github.io)",
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "add-contributor": "all-contributors add",
+    "precommit": "yarn flow && lint-staged",
+    "fmt": "prettier --write '**/*.{js,json,md}'",
+    "build": "babel src -d dest --ignore *.test.js",
+    "prepare": "yarn build",
+    "flow": "flow",
+    "lint": "eslint .",
+    "test": "jest",
+    "test:cov": "jest --coverage --ci --runInBand",
+    "test:ci": "yarn flow && yarn lint && yarn test:cov"
+  },
+  "lint-staged": {
+    "*.{js,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "files": [
+    "dest"
+  ],
+  "main": "dest",
+  "keywords": [
+    "test",
+    "jest",
+    "redux",
+    "react",
+    "snapshot",
+    "diff",
+    "reducer",
+    "test"
+  ],
+  "dependencies": {
+    "snapshot-diff": "^0.3.0"
+  },
+  "devDependencies": {
+    "all-contributors-cli": "^4.11.1",
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^22.4.3",
+    "babel-preset-zero": "^0.1.0",
+    "eslint": "^4.19.0",
+    "eslint-config-precure": "^2.6.0",
+    "flow-bin": "^0.68.0",
+    "husky": "^0.14.3",
+    "jest": "^22.4.2",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.11.1"
+  }
+}
