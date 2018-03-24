@@ -15,8 +15,6 @@ $ yarn add --dev reducer-tester
 
 ## Usage
 
-reducer.js
-
 ```js
 // reducer.js
 export const initialState = 0
