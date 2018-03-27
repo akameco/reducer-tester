@@ -1,6 +1,12 @@
 import snapshotDiff from 'snapshot-diff'
 
-function reducerTester({ tests, reducer, state, initialTest = true }) {
+function reducerTester({
+  tests,
+  reducer,
+  state,
+  initialTest = true,
+  titlePrefix = '',
+}) {
   if (tests.length === 0) {
     return
   }
@@ -14,7 +20,7 @@ function reducerTester({ tests, reducer, state, initialTest = true }) {
   }
 
   for (const t of tests) {
-    it(t.type, () => {
+    it(titlePrefix + t.type, () => {
       expect(
         snapshotDiff(state, reducer(state, t), {
           expand: true,
