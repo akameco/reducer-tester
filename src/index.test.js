@@ -80,3 +80,10 @@ reducerTester({
   reducer,
   state: {},
 })
+
+reducerTester({
+  tests: [{ type: 'work', payload: 'payload' }],
+  reducer,
+  state: {},
+  titlePrefix: 'handle ',
+})

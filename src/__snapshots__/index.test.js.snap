@@ -5,6 +5,22 @@ exports[`handle initial state 1`] = `
 Compared values have no visual difference."
 `;
 
+exports[`handle initial state 2`] = `
+"Snapshot Diff:
+Compared values have no visual difference."
+`;
+
+exports[`handle work 1`] = `
+"Snapshot Diff:
+- Before
++ After
+
+- Object {}
++ Object {
++   \\"result\\": \\"payload\\",
++ }"
+`;
+
 exports[`work 1`] = `
 "Snapshot Diff:
 - Before
