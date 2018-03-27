@@ -1,3 +1,4 @@
+// @flow
 import snapshotDiff from 'snapshot-diff'
 
 function reducerTester({
@@ -6,6 +7,12 @@ function reducerTester({
   state,
   initialTest = true,
   titlePrefix = '',
+}: {
+  tests: Array<{ type: $Subtype<string>, [key: any]: any }>,
+  reducer: Function,
+  state: Object,
+  initialTest?: boolean,
+  titlePrefix?: string,
 }) {
   if (tests.length === 0) {
     return
