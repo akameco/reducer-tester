@@ -35,9 +35,10 @@ import reducerTester from 'reducer-tester'
 import reducer, { initialState } from './reducer'
 
 reducerTester({
-  reducer,
-  state: initialState,
-  tests: [{ type: '@@INIT' }, { type: 'inc' }, { type: 'dec' }],
+  reducer, // #required
+  state: initialState, // #required
+  tests: [{ type: 'inc' }, { type: 'dec' }], // #required
+  initialTest: true, // # optional, default: true
 })
 ```
 
@@ -46,15 +47,15 @@ reducerTester({
 ```diff
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`@@INIT 1`] = `
+exports[`handle initial state 1`] = `
 "Snapshot Diff:
 Compared values have no visual difference."
 `;
 
 exports[`dec 1`] = `
 "Snapshot Diff:
-- First value
-+ Second value
+- Before
++ After
 
   Object {
 -   \\"count\\": 0,
@@ -65,8 +66,8 @@ exports[`dec 1`] = `
 
 exports[`inc 1`] = `
 "Snapshot Diff:
-- First value
-+ Second value
+- Before
++ After
 
   Object {
 -   \\"count\\": 0,
@@ -76,9 +77,21 @@ exports[`inc 1`] = `
 `;
 ```
 
-## API
+### Tips
 
-### `reducerTester({reducer: Function, state: Object, tests: Array<{type: $Subtype<string>}>})`
+#### Atom Editor User
+
+Install `language-diff` and `file-types`. And open `config.json` and edit as blow.
+
+```cson
+"*":
+  "file-types":
+    "\\.js\\.snap$": "source.diff"
+```
+
+Hooray! Very readable!
+
+[![https://gyazo.com/3b9bda2abe162d0232c73ae49ab4dc4d](https://i.gyazo.com/3b9bda2abe162d0232c73ae49ab4dc4d.png)](https://gyazo.com/3b9bda2abe162d0232c73ae49ab4dc4d)
 
 ## Contributors
 
