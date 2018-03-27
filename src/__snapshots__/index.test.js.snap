@@ -1,5 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`handle initial state 1`] = `
+"Snapshot Diff:
+Compared values have no visual difference."
+`;
+
 exports[`work 1`] = `
 "Snapshot Diff:
 - Before

@@ -2,7 +2,12 @@
 import reducerTester from '.'
 
 const noop = () => {}
-const reducer = (state, action) => ({ result: action.payload })
+const reducer = (state = {}, action) => {
+  if (action.payload) {
+    return { result: action.payload }
+  }
+  return state
+}
 
 let itSpy
 
@@ -21,7 +26,7 @@ test('can provide an object for tests', () => {
     reducer,
     state: {},
   })
-  expect(itSpy).toHaveBeenCalledTimes(1)
+  expect(itSpy).toHaveBeenCalledTimes(2)
   expect(itSpy).toBeCalledWith(title, expect.any(Function))
 })
 
@@ -32,6 +37,17 @@ test('can provide empty array for tests', () => {
     state: {},
   })
   expect(itSpy).not.toBeCalled()
+})
+
+test('not handle initial state with initialTest =  false', () => {
+  reducerTester({
+    tests: [{ type: 'test' }],
+    reducer,
+    state: {},
+    initialTest: false,
+  })
+
+  expect(itSpy).toHaveBeenCalledTimes(1)
 })
 
 // haha... jest work :)
