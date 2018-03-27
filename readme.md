@@ -35,10 +35,9 @@ import reducerTester from 'reducer-tester'
 import reducer, { initialState } from './reducer'
 
 reducerTester({
-  reducer, // #required
-  state: initialState, // #required
-  tests: [{ type: 'inc' }, { type: 'dec' }], // #required
-  initialTest: true, // # optional, default: true
+  reducer,
+  state: initialState,
+  tests: [{ type: 'inc' }, { type: 'dec' }],
 })
 ```
 
@@ -73,6 +72,47 @@ exports[`inc 1`] = `
 -   \\"count\\": 0,
 +   \\"count\\": 1,
     \\"other\\": \\"other\\",
+  }"
+`;
+```
+
+## Full example
+
+```js
+import reducerTester from 'reducer-tester'
+import reducer, { initialState } from './reducer'
+
+reducerTester({
+  reducer, // #required
+  state: initialState, // #required
+  tests: [{ type: 'inc' }, { type: 'dec' }], // #required
+  initialTest: false, // # optional, default: true
+  titlePrefix: 'handle ', // # optional, default: ''
+})
+```
+
+```diff
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`handle dec 1`] = `
+"Snapshot Diff:
+- Before
++ After
+
+  Object {
+-   \\"count\\": 0,
++   \\"count\\": -1,
+  }"
+`;
+
+exports[`handle inc 1`] = `
+"Snapshot Diff:
+- Before
++ After
+
+  Object {
+-   \\"count\\": 0,
++   \\"count\\": 1,
   }"
 `;
 ```
