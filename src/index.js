@@ -7,7 +7,13 @@ function reducerTester({ tests, reducer, state }) {
 
   for (const t of tests) {
     it(t.type, () => {
-      expect(snapshotDiff(state, reducer(state, t))).toMatchSnapshot()
+      expect(
+        snapshotDiff(state, reducer(state, t), {
+          expand: true,
+          aAnnotation: 'Before',
+          bAnnotation: 'After',
+        })
+      ).toMatchSnapshot()
     })
   }
 }

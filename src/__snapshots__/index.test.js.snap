@@ -2,8 +2,8 @@
 
 exports[`work 1`] = `
 "Snapshot Diff:
-- First value
-+ Second value
+- Before
++ After
 
 - Object {}
 + Object {
