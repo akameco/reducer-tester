@@ -21,7 +21,9 @@ exports[`handle work 1`] = `
 + }"
 `;
 
-exports[`throws an invariant if tests is not Array 1`] = `"required tests property."`;
+exports[`throws an invariant if state property is not exist 1`] = `"required \`state\` property."`;
+
+exports[`throws an invariant if tests is not Array 1`] = `"required \`tests\` property."`;
 
 exports[`throws an invariant if type property is not exist 1`] = `"{\\"typo\\":\\"typo\\"} Action required \`type\` property."`;
 

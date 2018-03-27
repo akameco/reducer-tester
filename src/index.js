@@ -23,7 +23,8 @@ function reducerTester({
     })
   }
 
-  invariant(tests, 'required tests property.')
+  invariant(state, 'required `state` property.')
+  invariant(tests, 'required `tests` property.')
   invariant(Array.isArray(tests), 'tests must be a Array.')
 
   for (const t of tests) {

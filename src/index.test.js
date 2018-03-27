@@ -35,6 +35,13 @@ test('throws an invariant if type property is not exist', () => {
   }).toThrowErrorMatchingSnapshot()
 })
 
+test('throws an invariant if state property is not exist', () => {
+  expect(() => {
+    // $FlowFixMe
+    reducerTester({ reducer, tests: [] })
+  }).toThrowErrorMatchingSnapshot()
+})
+
 test('can provide an object for tests', () => {
   const title = 'reducer-test'
   reducerTester({
