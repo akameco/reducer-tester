@@ -39,6 +39,18 @@ test('can provide empty array for tests', () => {
   expect(itSpy).not.toBeCalled()
 })
 
+test('can provide initialTest', () => {
+  reducerTester({
+    tests: [{ type: 'test' }],
+    reducer,
+    state: {},
+    initialTest: true,
+  })
+
+  expect(itSpy).toHaveBeenCalledTimes(2)
+  expect(itSpy).toBeCalledWith('handle initial state', expect.any(Function))
+})
+
 test('not handle initial state with initialTest =  false', () => {
   reducerTester({
     tests: [{ type: 'test' }],
@@ -48,6 +60,18 @@ test('not handle initial state with initialTest =  false', () => {
   })
 
   expect(itSpy).toHaveBeenCalledTimes(1)
+})
+
+test('can provide titlePrefix', () => {
+  const title = 'reducer'
+  reducerTester({
+    tests: [{ type: title, payload: 'payload' }],
+    reducer,
+    state: {},
+    titlePrefix: 'handle ',
+  })
+  expect(itSpy).toHaveBeenCalledTimes(2)
+  expect(itSpy).toBeCalledWith('handle reducer', expect.any(Function))
 })
 
 // haha... jest work :)
