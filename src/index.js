@@ -1,5 +1,6 @@
 // @flow
 import snapshotDiff from 'snapshot-diff'
+import invariant from 'invariant'
 
 function reducerTester({
   tests,
@@ -14,10 +15,6 @@ function reducerTester({
   initialTest?: boolean,
   titlePrefix?: string,
 }) {
-  if (tests.length === 0) {
-    return
-  }
-
   if (initialTest) {
     it('handle initial state', () => {
       expect(
@@ -26,7 +23,12 @@ function reducerTester({
     })
   }
 
+  invariant(tests, 'required tests property.')
+  invariant(Array.isArray(tests), 'tests must be a Array.')
+
   for (const t of tests) {
+    invariant(t.type, `${JSON.stringify(t)} Action required \`type\` property.`)
+
     it(titlePrefix + t.type, () => {
       expect(
         snapshotDiff(state, reducer(state, t), {

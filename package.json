@@ -41,6 +41,7 @@
     "test"
   ],
   "dependencies": {
+    "invariant": "^2.2.4",
     "snapshot-diff": "^0.3.0"
   },
   "devDependencies": {
