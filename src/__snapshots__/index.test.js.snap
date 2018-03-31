@@ -1,24 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`handle initial state 1`] = `
-"Snapshot Diff:
-Compared values have no visual difference."
+Snapshot Diff:
+Compared values have no visual difference.
 `;
 
 exports[`handle initial state 2`] = `
-"Snapshot Diff:
-Compared values have no visual difference."
+Snapshot Diff:
+Compared values have no visual difference.
 `;
 
 exports[`handle work 1`] = `
-"Snapshot Diff:
+Snapshot Diff:
 - Before
 + After
 
 - Object {}
 + Object {
-+   \\"result\\": \\"payload\\",
-+ }"
++   "result": "payload",
++ }
 `;
 
 exports[`throws an invariant if state property is not exist 1`] = `"required \`state\` property."`;
@@ -28,12 +28,12 @@ exports[`throws an invariant if tests is not Array 1`] = `"required \`tests\` pr
 exports[`throws an invariant if type property is not exist 1`] = `"{\\"typo\\":\\"typo\\"} Action required \`type\` property."`;
 
 exports[`work 1`] = `
-"Snapshot Diff:
+Snapshot Diff:
 - Before
 + After
 
 - Object {}
 + Object {
-+   \\"result\\": \\"payload\\",
-+ }"
++   "result": "payload",
++ }
 `;

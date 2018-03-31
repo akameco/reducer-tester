@@ -2,6 +2,8 @@
 import snapshotDiff from 'snapshot-diff'
 import invariant from 'invariant'
 
+expect.addSnapshotSerializer(snapshotDiff.getSnapshotDiffSerializer())
+
 function reducerTester({
   tests,
   reducer,
