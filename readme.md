@@ -57,9 +57,9 @@ exports[`dec 1`] = `
 + After
 
   Object {
--   \\"count\\": 0,
-+   \\"count\\": -1,
-    \\"other\\": \\"other\\",
+-   "count": 0,
++   "count": -1,
+    "other": "other",
   }"
 `;
 
@@ -69,10 +69,10 @@ exports[`inc 1`] = `
 + After
 
   Object {
--   \\"count\\": 0,
-+   \\"count\\": 1,
-    \\"other\\": \\"other\\",
-  }"
+-   "count": 0,
++   "count": 1,
+    "other": "other",
+  }
 `;
 ```
 
@@ -100,9 +100,9 @@ exports[`handle dec 1`] = `
 + After
 
   Object {
--   \\"count\\": 0,
-+   \\"count\\": -1,
-  }"
+-   "count: 0,
++   count: -1,
+  }
 `;
 
 exports[`handle inc 1`] = `
@@ -111,9 +111,9 @@ exports[`handle inc 1`] = `
 + After
 
   Object {
--   \\"count\\": 0,
-+   \\"count\\": 1,
-  }"
+-   count: 0,
++   count: 1,
+  }
 `;
 ```
 
