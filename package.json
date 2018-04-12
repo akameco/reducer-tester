@@ -48,13 +48,13 @@
     "all-contributors-cli": "^4.11.1",
     "babel-cli": "^6.26.0",
     "babel-jest": "^22.4.3",
-    "babel-preset-zero": "^0.1.0",
+    "babel-preset-zero": "^0.2.0",
     "eslint": "^4.19.0",
-    "eslint-config-precure": "^2.6.0",
+    "eslint-config-precure": "^2.7.0",
     "flow-bin": "^0.69.0",
     "husky": "^0.14.3",
     "jest": "^22.4.2",
-    "lint-staged": "^7.0.1",
-    "prettier": "^1.11.1"
+    "lint-staged": "^7.0.4",
+    "prettier": "^1.12.0"
   }
 }
