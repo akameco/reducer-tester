@@ -50,8 +50,11 @@ test('can provide an object for tests', () => {
     tests: [{ type: title, payload: 'payload' }],
   })
   expect(itSpy).toHaveBeenCalledTimes(2)
-  expect(itSpy).toBeCalledWith(title, expect.any(Function))
-  expect(itSpy).toBeCalledWith('handle initial state', expect.any(Function))
+  expect(itSpy).toHaveBeenCalledWith(title, expect.any(Function))
+  expect(itSpy).toHaveBeenCalledWith(
+    'handle initial state',
+    expect.any(Function)
+  )
 })
 
 test('can provide empty array for tests', () => {
@@ -68,7 +71,10 @@ test('can provide initialTest', () => {
   })
 
   expect(itSpy).toHaveBeenCalledTimes(2)
-  expect(itSpy).toBeCalledWith('handle initial state', expect.any(Function))
+  expect(itSpy).toHaveBeenCalledWith(
+    'handle initial state',
+    expect.any(Function)
+  )
 })
 
 test('not handle initial state with initialTest =  false', () => {
@@ -91,7 +97,7 @@ test('can provide titlePrefix', () => {
     tests: [{ type: title, payload: 'payload' }],
   })
   expect(itSpy).toHaveBeenCalledTimes(2)
-  expect(itSpy).toBeCalledWith('handle reducer', expect.any(Function))
+  expect(itSpy).toHaveBeenCalledWith('handle reducer', expect.any(Function))
 })
 
 // haha... jest work :)
