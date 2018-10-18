@@ -41,7 +41,7 @@
   ],
   "dependencies": {
     "invariant": "^2.2.4",
-    "snapshot-diff": "^0.3.0"
+    "snapshot-diff": "^0.4.0"
   },
   "devDependencies": {
     "all-contributors-cli": "^5.4.0",
