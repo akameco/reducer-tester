@@ -26,7 +26,8 @@
     ]
   },
   "files": [
-    "dest"
+    "dest",
+    "types/index.d.ts"
   ],
   "main": "dest",
   "keywords": [

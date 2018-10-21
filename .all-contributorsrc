@@ -18,6 +18,16 @@
         "test",
         "infra"
       ]
+    },
+    {
+      "login": "adhrinae",
+      "name": "Ahn Dohyung",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/14539203?v=4",
+      "profile": "https://adhrinae.github.io",
+      "contributions": [
+        "doc"
+      ]
     }
-  ]
+  ],
+  "repoType": "github"
 }
