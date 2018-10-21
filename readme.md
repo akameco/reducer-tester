@@ -7,6 +7,9 @@
 
 > reducer tester
 
+See [how-to-test-reducers](https://github.com/akameco/how-to-test-reducers)
+
+
 ## Install
 
 ```
