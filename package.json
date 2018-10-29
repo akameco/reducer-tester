@@ -30,6 +30,7 @@
     "types/index.d.ts"
   ],
   "main": "dest",
+  "types": "types/index.d.ts",
   "keywords": [
     "test",
     "jest",
