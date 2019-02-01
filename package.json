@@ -50,13 +50,13 @@
     "@babel/core": "7.2.2",
     "all-contributors-cli": "5.11.0",
     "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "23.6.0",
+    "babel-jest": "24.0.0",
     "babel-preset-zero": "0.7.0",
     "eslint": "5.12.1",
     "eslint-config-precure": "3.5.0",
     "flow-bin": "0.92.0",
     "husky": "1.1.4",
-    "jest": "23.6.0",
+    "jest": "24.0.0",
     "lint-staged": "8.1.1",
     "prettier": "1.14.3"
   },
@@ -66,6 +66,9 @@
     }
   },
   "jest": {
-     "modulePathIgnorePatterns": ["dest"]
+    "modulePathIgnorePatterns": [
+      "dest",
+      "types"
+    ]
   }
 }
