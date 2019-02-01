@@ -1,25 +1,3 @@
 {
-  "extends": [
-    "config:base",
-    ":timezone(Asia/Tokyo)",
-    ":rebaseStalePrs",
-    ":automergeMinor",
-    "group:monorepos",
-    "group:linters"
-  ],
-  "packageRules": [
-    {
-      "groupName": "eslint and prettier",
-      "packageNames": ["^eslint-", "prettier"],
-      "automerge": true
-    },
-    {
-      "groupName": "dev utils",
-      "packageNames": ["all-contributors-cli", "husky", "lint-staged"],
-      "automerge": true
-    }
-  ],
-  "npm": {
-    "extends": [":separatePatchReleases"]
-  }
+  "extends": ["@akameco"]
 }
