@@ -16,7 +16,6 @@ expect.addSnapshotSerializer(snapshotDiff.getSnapshotDiffSerializer())
  * @property {optional} initialTest - Tells reducerTester if this test is testing initial state.
  * @property {optional} titlePrefix - Set prefix for each action snapshots. otherwise snapshot title will be just action type.
  */
-
 interface TesterOption<State = any, Action extends ReuxAction = AnyAction> {
   tests: Action[]
   reducer: Reducer<State, Action>
