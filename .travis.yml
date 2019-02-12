@@ -9,6 +9,7 @@ cache:
     - "node_modules"
 
 script:
+  - yarn run build
   - yarn run test:ci
 
 notifications:

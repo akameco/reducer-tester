@@ -1,8 +1,6 @@
 {
-  "extends": ["precure/oss"],
+  "extends": ["precure/auto"],
   "rules": {
-    "jest/consistent-test-it": 0,
-    "flowtype/require-valid-file-annotation": 0,
-    "flowtype/no-weak-types": 0
+    "jest/consistent-test-it": 0
   }
 }

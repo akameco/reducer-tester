@@ -1,0 +1,10 @@
+{
+  "extends": "@akameco/tsconfig",
+  "compilerOptions": {
+    "lib": ["dom", "es2015"],
+    "target": "es5",
+    "outDir": "dest"
+  },
+  "include": ["src"],
+  "exclude": ["dest", "node_modules"]
+}

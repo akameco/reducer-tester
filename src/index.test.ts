@@ -1,19 +1,20 @@
-// @flow
 import reducerTester from '.'
 
-const noop = () => {}
-const reducer = (state = {}, action) => {
+const noop = (): void => {}
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const reducer = (state: any = {}, action: any): any => {
   if (action.payload) {
     return { result: action.payload }
   }
   return state
 }
 
-let itSpy
+let itSpy: jest.SpyInstance
 
 const state = {}
 
 beforeEach(() => {
+  // @ts-ignore
   itSpy = jest.spyOn(global, 'it').mockImplementation(noop)
 })
 
@@ -23,21 +24,21 @@ afterEach(() => {
 
 test('throws an invariant if tests is not Array', () => {
   expect(() => {
-    // $FlowFixMe
+    // @ts-ignore
     reducerTester({ reducer, state, tests: null })
   }).toThrowErrorMatchingSnapshot()
 })
 
 test('throws an invariant if type property is not exist', () => {
   expect(() => {
-    // $FlowFixMe
+    // @ts-ignore
     reducerTester({ reducer, state, tests: [{ typo: 'typo' }] })
   }).toThrowErrorMatchingSnapshot()
 })
 
 test('throws an invariant if state property is not exist', () => {
   expect(() => {
-    // $FlowFixMe
+    // @ts-ignore
     reducerTester({ reducer, tests: [] })
   }).toThrowErrorMatchingSnapshot()
 })
