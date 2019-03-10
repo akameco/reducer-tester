@@ -1436,10 +1436,10 @@ eslint-ast-utils@^1.0.0:
     lodash.get "^4.4.2"
     lodash.zip "^4.2.0"
 
-eslint-config-precure@4.9.1:
-  version "4.9.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-precure/-/eslint-config-precure-4.9.1.tgz#8309477d3513ba8c9c6d4c9197d0b52ad457cd33"
-  integrity sha512-blHCmSlz6z3UL4b9dJNvuhjFyo+rBj4A2J3/oi2ktTSzPll+BlGbNohHzi78ga+dGilYmdaOgIoJQKWs8hgu3Q==
+eslint-config-precure@4.10.1:
+  version "4.10.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-precure/-/eslint-config-precure-4.10.1.tgz#9747d5d541a24bfd6ee2d500df8a55ccf7cf0eff"
+  integrity sha512-Ogw6W1R6Gr7oICnjq3ji18ynfwSo1bGu0luut5ThDXMc/WJEjqiNSPIZAvXD/FK+YPkknOua4RdmGKXOwqPp2Q==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^1.4.2"
     "@typescript-eslint/parser" "^1.4.2"
@@ -1450,7 +1450,7 @@ eslint-config-precure@4.9.1:
     eslint-plugin-jest "^22.3.0"
     eslint-plugin-prettier "^3.0.1"
     eslint-plugin-react "^7.12.4"
-    eslint-plugin-react-hooks "^1.3.0"
+    eslint-plugin-react-hooks "^1.5.0"
     eslint-plugin-unicorn "^7.1.0"
     ptils "^0.3.0"
 
@@ -1512,7 +1512,7 @@ eslint-plugin-prettier@^3.0.1:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-eslint-plugin-react-hooks@^1.3.0:
+eslint-plugin-react-hooks@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-1.5.0.tgz#cdd958cfff55bd5fa4f84db90d1490fb5ca4ae2b"
   integrity sha512-iwDuWR2ReRgvJsNm8fXPtTKdg78IVQF8I4+am3ntztPf/+nPnWZfArFu6aXpaC75/iCYRrkqI8nPCYkxJstmpA==
@@ -4230,7 +4230,7 @@ realpath-native@^1.1.0:
   dependencies:
     util.promisify "^1.0.0"
 
-redux@*:
+redux@*, redux@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/redux/-/redux-4.0.1.tgz#436cae6cc40fbe4727689d7c8fae44808f1bfef5"
   integrity sha512-R7bAtSkk7nY6O/OYMVR9RiBI+XghjF9rlbl5806HJbQph0LJVHZrU5oaO4q70eUKiqMRqm4y07KLTlMZ2BlVmg==

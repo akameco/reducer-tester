@@ -1,8 +1,8 @@
+import { AnyAction } from 'redux'
 import reducerTester from '.'
 
 const noop = (): void => {}
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const reducer = (state: any = {}, action: any): any => {
+const reducer = (state: object = {}, action: AnyAction): object => {
   if (action.payload) {
     return { result: action.payload }
   }
