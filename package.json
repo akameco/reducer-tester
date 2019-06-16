@@ -38,11 +38,11 @@
     "snapshot-diff": "^0.5.1"
   },
   "devDependencies": {
-    "@akameco/tsconfig": "^0.2.0",
-    "@types/invariant": "^2.2.29",
-    "@types/jest": "^24.0.13",
-    "@types/jest-diff": "^20.0.1",
-    "@types/redux": "^3.6.0",
+    "@akameco/tsconfig": "0.2.0",
+    "@types/invariant": "2.2.29",
+    "@types/jest": "24.0.13",
+    "@types/jest-diff": "20.0.1",
+    "@types/redux": "3.6.0",
     "all-contributors-cli": "6.6.1",
     "eslint": "5.16.0",
     "eslint-config-precure": "4.17.0",
@@ -50,9 +50,9 @@
     "jest": "24.8.0",
     "lint-staged": "8.2.0",
     "prettier": "1.18.2",
-    "redux": "^4.0.1",
-    "ts-jest": "^24.0.2",
-    "typescript": "^3.5.1"
+    "redux": "4.0.1",
+    "ts-jest": "24.0.2",
+    "typescript": "3.5.1"
   },
   "husky": {
     "hooks": {
