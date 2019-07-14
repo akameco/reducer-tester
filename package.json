@@ -50,7 +50,7 @@
     "jest": "24.8.0",
     "lint-staged": "9.1.0",
     "prettier": "1.18.2",
-    "redux": "4.0.1",
+    "redux": "4.0.4",
     "ts-jest": "24.0.2",
     "typescript": "3.5.2"
   },
